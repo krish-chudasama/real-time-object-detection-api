@@ -1,5 +1,18 @@
+# Python
 venv/
 __pycache__/
+
+# AI Models
+models/
+*.pt
+
+# Uploads and Outputs
 uploads/
 outputs/
-*.pyc
+
+# Training
+runs/
+datasets/
+
+# System
+.DS_Store
