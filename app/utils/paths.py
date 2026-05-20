@@ -1,12 +1,11 @@
 from pathlib import Path
 
-UPLOAD_DIR = Path("uploads")
-OUTPUT_DIR = Path("outputs")
-MODEL_DIR = Path("models")
-DEFAULT_MODEL_PATH = Path("yolov8n.pt")
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+UPLOADS_DIR = BASE_DIR / "uploads"
+OUTPUTS_DIR = BASE_DIR / "outputs"
+MODELS_DIR = BASE_DIR / "models"
 
-def ensure_runtime_directories() -> None:
-    UPLOAD_DIR.mkdir(exist_ok=True)
-    OUTPUT_DIR.mkdir(exist_ok=True)
-    MODEL_DIR.mkdir(exist_ok=True)
+UPLOADS_DIR.mkdir(exist_ok=True)
+OUTPUTS_DIR.mkdir(exist_ok=True)
+MODELS_DIR.mkdir(exist_ok=True)

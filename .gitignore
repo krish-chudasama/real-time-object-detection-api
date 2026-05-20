@@ -1,18 +1,60 @@
+# =========================
 # Python
+# =========================
 venv/
+.venv/
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
 
+# Ultralytics
+.ultralytics-config/
+
+# =========================
 # AI Models
+# =========================
 models/
 *.pt
+*.onnx
+*.engine
 
-# Uploads and Outputs
+# =========================
+# Uploads / Outputs
+# =========================
 uploads/
 outputs/
 
-# Training
+# =========================
+# Training / Experiments
+# =========================
 runs/
 datasets/
 
-# System
+# =========================
+# Frontend (React/Vite)
+# =========================
+frontend/node_modules/
+frontend/dist/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS
+# =========================
 .DS_Store
+Thumbs.db

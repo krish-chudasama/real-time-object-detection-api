@@ -1,14 +1,14 @@
 from fastapi import APIRouter
 
-from app.models.yolo_model import ModelListResponse
-from app.services.model_registry import model_registry
+from app.services.model_registry import ModelRegistry
 
-router = APIRouter(tags=["Models"])
+router = APIRouter()
+
+registry = ModelRegistry()
 
 
-@router.get("/models", response_model=ModelListResponse)
-def list_models() -> ModelListResponse:
-    return ModelListResponse(
-        models=model_registry.list_models(),
-        default_model=model_registry.default_model_name,
-    )
+@router.get("/models")
+def get_models():
+    return {
+        "available_models": registry.get_available_models()
+    }

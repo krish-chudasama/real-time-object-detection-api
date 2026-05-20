@@ -1,0 +1,7 @@
+$env:Path += ";C:\Program Files\nodejs"
+$env:Path += ";C:\Users\chuda\AppData\Roaming\npm"
+
+node --version
+codex --help
+
+codex
