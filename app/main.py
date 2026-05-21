@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from app.api.detection import router as detection_router
+from app.api.evaluation import router as evaluation_router
 from app.api.models import router as models_router
 from app.utils.paths import OUTPUTS_DIR
 
@@ -22,6 +23,7 @@ app.add_middleware(
 )
 
 app.include_router(detection_router)
+app.include_router(evaluation_router)
 app.include_router(models_router)
 app.mount("/outputs", StaticFiles(directory=OUTPUTS_DIR), name="outputs")
 
